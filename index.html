@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>BEER Searching</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src='build/main.bundle.js'></script>
+	<script src='js/getbeer.js'></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.test{
+			width: 300px
+		}
+		body {
+			background-color: #FAEBD7;
+			background-image: url("beer.png");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: top; 
+			background-size: cover;
+	
+		}
+		#find{
+			border-style: inset;
+			margin-bottom: 5px;			
+		}
+		}
+		#find2{
+			border-style: double;
+			margin-bottom: 10px;
+		}
+		input{
+			padding: 12px 20px;
+			
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+		#btn{
+			background-color: white; 
+			color: #FFCC99; 
+			border: 2px outset #FFDEAD;
+		}
+		#btn:hover{
+			background-color: #FFDEAD;
+			color: white;
+			border: 2px inset #FFDEAD;
+		}
+	</style>
+</head>
+<body>
+<center>
+	<h1>BEER SEARCHING <i class="fa fa-exclamation" aria-hidden="true"></i></h1>
+	<br>
+	<br>
+	<input id="find" type="text"  placeholder="Name"class="test"><br>
+	<h5>OR</h5>
+	<input id="find2" type="text"  placeholder="Yeast"class="test" ><br>
+	<button id="btn" type="button" class="btn btn-info" onclick="findBeer((document.getElementById('find').value),(document.getElementById('find2').value))"><i class="fa fa-search" aria-hidden="true"></i></button>
+	<br>
+	result:<div id="num"></div>
+	<hr>
+	<div id="beers" border="1"></div>
+	</center>
+
+
+</body>
+
+
+</html>
